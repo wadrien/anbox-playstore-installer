@@ -131,7 +131,7 @@ fi
 ANBOX=$(which anbox)
 SNAP_TOP=""
 if ( [ -d '/var/snap' ] || [ -d '/snap' ] ) && \
-	( [ ${ANBOX} = "/snap/bin/anbox" ] || [ ${ANBOX} == /var/lib/snapd/snap/bin/anbox ] );then
+	( [ ${ANBOX} = "/snap/bin/anbox" ] || [ -d '/snap' ] );then
 	if [ -d '/snap' ];then
 		SNAP_TOP=/snap
 	else
